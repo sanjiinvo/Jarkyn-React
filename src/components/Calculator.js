@@ -1,7 +1,7 @@
 import { useState } from "react";
+import './Scss/Calculator.scss'
 
-
-function Calculator(){
+function MainCalculator(){
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -39,7 +39,9 @@ function Calculator(){
       };
     
       return (
-        <form onSubmit={handleSubmit}>
+        <form className="Main-Calc" id="Main-Calculator" onSubmit={handleSubmit}>
+
+          <p className="Calc-title"> Калькулятор </p>
           <input
             type="text"
             name="name"
@@ -114,4 +116,4 @@ function Calculator(){
       );
     }
     
-    export default Calculator;
+    export default MainCalculator;

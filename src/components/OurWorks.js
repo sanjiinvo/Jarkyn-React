@@ -4,7 +4,7 @@ import Carousel from 'react-bootstrap/Carousel';
 
 function OurWorks() {
   return (
-    <div className='OurWorks'>
+    <div id='ourworks' className='OurWorks'>
         <Carousel className='Carousel-box'>
       <Carousel.Item>
         <img

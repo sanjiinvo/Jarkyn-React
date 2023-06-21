@@ -1,13 +1,16 @@
 import { Clipboard2Check } from "react-bootstrap-icons";
-
+import './Scss/AboutUs.scss'
 
 function AboutUs(){
     return(
-        <div className="aboutUs">
+        <div id="aboutus" className="aboutUs">
             <div className="top-aboutUs">
             <div className="left-top-aboutUs">
             <p className="title-aboutUs">
-                JarkynUI - Ремонт квартир под ключ
+                JarkynUI - Ремонт 
+            </p>
+            <p className="title-aboutUs">
+                квартир под ключ
             </p>
             <p className="description-aboutUs">
                 У нас есть 4 пакета услуг и работ по договору

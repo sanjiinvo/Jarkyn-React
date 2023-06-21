@@ -4,7 +4,7 @@ import { Check, Check2, Check2All, XLg } from "react-bootstrap-icons";
 function PocketsBox(){
 
     return(
-        <div className="pockets-box">
+        <div placeholder="" id="pockets" className="pockets-box">
             <p className="pockets-box-title">
                 Пакеты услуг
             </p>
