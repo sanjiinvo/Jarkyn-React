@@ -18,7 +18,7 @@ function AboutUs(){
             </div>
             <div className="right-top-aboutUs">
                 <ul>
-                    <li className="specials-aboutUs"><Clipboard2Check color="orange"/> Качественное и быстр</li>
+                    <li className="specials-aboutUs"><Clipboard2Check color="orange"/> Качественно и быстро</li>
                     <li className="specials-aboutUs"><Clipboard2Check color="orange"/> Упаковка и вынос мусора</li>
                     <li className="specials-aboutUs"><Clipboard2Check color="orange"/> Подбор и закуп материала</li>
                     <li className="specials-aboutUs"><Clipboard2Check color="orange"/> Бесплатный выезд на замеры</li>

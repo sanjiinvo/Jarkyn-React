@@ -1,8 +1,122 @@
 .Main-Calc{
     display: flex;
     flex-direction: column;
-
+    padding: 2vh 3%;
+    width: 80%;
+    align-items: center;
+    justify-content: space-evenly;
+    background: #b7cfe5;
+    border-radius: 70px;
+    margin-top: 15vh;
+    height: 700px;
     .Calc-title{
+        margin: 1vh auto;
+        font-size: 2rem;
+        color: #035397;
+        font-weight: bold;
+        border-bottom: 2px solid orange;
+    }
+    .Calc-Part{
+        margin-top: 3vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .TypeOfArea{
+            width: 400px;
+            text-align: center;
+            background: #5089C6;
+            color: white;
+            padding: 16px;
+            margin: 0 100px;
+            border-radius: 8px;
+            font-size: 1.5rem;
+        }
+        .TypeOfArea option {
+            color: #fff;
+            border-radius: 8px;
+          }
+        .Room-Count{
+            @extend .TypeOfArea
+        }
+    .RoomsAndType{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+
+        .Room-Range{
+            margin-top: 5vh;
+            width: 400px;
+            background: #5089C6;
+            color: white;
+            padding: 16px;
+            border-radius: 8px;
+            border: none;
+            text-align: center;
+            font-size: 1.5rem;
+
+        }
+        .Room-Range:focus{
+            outline: none;
+        }
+        .Room-Range::placeholder{
+            color: white;
+            text-align: center;
+            font-size: 1.5rem;
+            opacity: 0.5;
+            
+        }
+    }
+    .Design-Quest{
+        margin-top: 5vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+
+        .Design-Question{
+            font-size: 2rem;
+            color: #5089C6;
+        }
+
+        .Pers-Design{
+            width: 200px;
+            text-align: center;
+            background: #5089C6;
+            color: white;
+            padding: 8px 16px;
+            margin: 0 100px;
+            border-radius: 8px;
+            font-size: 1.5rem;
+        }
+    }
+    }
+    .TotalPrce-Box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .TotalPrice-title{
+            color: #035397;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .TotalPrice{
+                background: #035397;
+                padding: 16px;
+                width: 200px;
+                color: white;
+                font-size: 1.5rem;
+                font-weight: bold;
+                text-align: center;
+                border-radius: 8px;
+            }
+
+    }
+    
+    .PersInfo-Part{
 
     }
 }
