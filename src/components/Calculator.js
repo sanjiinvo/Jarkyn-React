@@ -1,5 +1,7 @@
 import { useState } from "react";
 import './Scss/Calculator.scss'
+import axios from "axios";
+import { response } from "har-validator";
 
 function MainCalculator(){
     const [formData, setFormData] = useState({
@@ -10,7 +12,7 @@ function MainCalculator(){
         tel: '',
         roomCount: '',
         selfdesign: 'да',
-        pricetophp: '',
+        pricetophp: '50000',
       });
     
       const handleChange = (e) => {
@@ -20,8 +22,22 @@ function MainCalculator(){
         });
       };
     
-      const handleSubmit = (e) => {
+      const ToSendMail = (e) => {
+
         e.preventDefault();
+
+
+        axios.post('./helpers/mail.php', formData)
+        .then((response)=>{
+          console.log(response.data);
+        })
+        .catch((error)=>{
+          console.log(error);
+        })
+
+
+
+        
     
         // Ваш код для отправки данных формы
     
@@ -34,12 +50,12 @@ function MainCalculator(){
           tel: '',
           roomCount: '',
           selfdesign: 'да',
-          pricetophp: '',
+          pricetophp: '50000',
         });
       };
     
       return (
-        <form className="Main-Calc" id="Main-Calculator" onSubmit={handleSubmit}>
+        <form className="Main-Calc" id="Main-Calculator" onSubmit={ToSendMail}>
 
           <p className="Calc-title"> Калькулятор </p>
                 <div className="Calc-Part">

@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './OurWorks.scss';
+import './Scss/OurWorks.scss';
 import Carousel from 'react-bootstrap/Carousel';
 
 function OurWorks() {
