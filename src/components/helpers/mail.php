@@ -10,6 +10,10 @@
 		$email = $_POST['email'];
 	else die ("Не заполнено поле \"Email\"");
 
+	if (isset($_POST['remontType']) && $_POST['remontType'] != "") //тут все точно так же как и в предыдушем случае
+	$remonttype = $_POST['remontType'];
+else die ("Не выбран \"Пакет\"");
+
 
 	
 	if (isset($_POST['typeOfArea']) && $_POST['typeOfArea'] != "") 
@@ -24,6 +28,9 @@ else die ("Не заполнено поле \"Квадратура\"");
 if (isset($_POST['tel']) && $_POST['tel'] != "") 
 $tel = $_POST['tel'];
 else die ("Не заполнено поле \"tel\"");
+
+
+
 
 
 
@@ -55,7 +62,9 @@ else die ("Не заполнено поле \"pricetophp\"");
 	$mes .= "Тип помещения: $areatype \n";
 	$mes .= "Кол-во Комнат: $roomCount \n";
 	$mes .= "Наличие дизайна: $selfdesign \n";
+	$mes .= "Выбранный пакет: $remonttype \n";
 	$mes .= "Примерная стоимость: $pricetophp \n";
+
 
  	$mes .= "Текст: $body"; 
 		

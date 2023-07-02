@@ -8,7 +8,7 @@
     background: #b7cfe5;
     border-radius: 70px;
     margin-top: 15vh;
-    height: 700px;
+    height: 100%;
     .Calc-title{
         margin: 1vh auto;
         font-size: 2rem;
@@ -93,6 +93,37 @@
             font-size: 1.5rem;
         }
     }
+    }
+    .select-pocket{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 3vw;
+        .pocket-item{
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            .pocket-image{
+                width: 100%;
+                border: 1px solid #5089C6;
+                border-radius: 16px;
+            }
+            .orange-outline{
+                border: 3px solid orange;
+            }
+
+            .pocket-description-select{
+                color: #5089C6;
+                font-weight: bold;
+                text-align: center;
+                font-size: 1.5rem;
+            }
+            .orange-color{
+                color: orange;
+            }
+
+        }
+
     }
     .TotalPrce-Box{
         display: flex;
