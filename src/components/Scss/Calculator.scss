@@ -1,4 +1,4 @@
-.Main-Calc{
+.Main-Calc {
     display: flex;
     flex-direction: column;
     padding: 2vh 3%;
@@ -9,145 +9,240 @@
     border-radius: 70px;
     margin-top: 15vh;
     height: 100%;
-    .Calc-title{
-        margin: 1vh auto;
-        font-size: 2rem;
-        color: #035397;
-        font-weight: bold;
-        border-bottom: 2px solid orange;
+  
+    .Calc-title {
+      margin: 1vh auto;
+      font-size: 2rem;
+      color: #035397;
+      font-weight: bold;
+      border-bottom: 2px solid orange;
     }
-    .Calc-Part{
-        margin-top: 3vh;
-        width: 100%;
+  
+    .Calc-Part {
+      margin-top: 3vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+  
+      .TypeOfArea {
+        width: 400px;
+        text-align: center;
+        background: #5089C6;
+        color: white;
+        padding: 16px;
+        margin: 0 100px;
+        border-radius: 8px;
+        font-size: 1.5rem;
+      }
+  
+      .TypeOfArea option {
+        color: #fff;
+        border-radius: 8px;
+      }
+  
+      .Room-Count {
+        @extend .TypeOfArea;
+      }
+    }
+  
+    .RoomsAndType {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+  
+      .Room-Range {
+        margin-top: 5vh;
+        width: 400px;
+        background: #5089C6;
+        color: white;
+        padding: 16px;
+        border-radius: 8px;
+        border: none;
+        text-align: center;
+        font-size: 1.5rem;
+      }
+  
+      .Room-Range:focus {
+        outline: none;
+      }
+  
+      .Room-Range::placeholder {
+        color: white;
+        text-align: center;
+        font-size: 1.5rem;
+        opacity: 0.5;
+      }
+    }
+  
+    .Design-Quest {
+      margin-top: 5vh;
+      display: flex;
+      justify-content: space-around;
+      align-items: baseline;
+  
+      .Design-Question {
+        font-size: 2rem;
+        color: #5089C6;
+      }
+  
+      .Pers-Design {
+        width: 200px;
+        text-align: center;
+        background: #5089C6;
+        color: white;
+        padding: 8px 16px;
+        margin: 0 100px;
+        border-radius: 8px;
+        font-size: 1.5rem;
+      }
+    }
+  
+    .NexPage {
+      width: 150px;
+      background: #0c385f;
+      color: white;
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin: auto;
+    }
+  
+    .select-pocket {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      gap: 3vw;
+  
+      .pocket-item {
         display: flex;
         flex-direction: column;
-
-        .TypeOfArea{
-            width: 400px;
-            text-align: center;
-            background: #5089C6;
-            color: white;
-            padding: 16px;
-            margin: 0 100px;
-            border-radius: 8px;
-            font-size: 1.5rem;
+        cursor: pointer;
+  
+        .pocket-image {
+          width: 100%;
+          border: 1px solid #5089C6;
+          border-radius: 16px;
         }
-        .TypeOfArea option {
-            color: #fff;
-            border-radius: 8px;
-          }
-        .Room-Count{
-            @extend .TypeOfArea
+  
+        .orange-outline {
+          border: 3px solid orange;
         }
-    .RoomsAndType{
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-        display: flex;
-        flex-wrap: wrap;
+  
+        .pocket-description-select {
+          color: #5089C6;
+          font-weight: bold;
+          text-align: center;
+          font-size: 1.5rem;
+        }
+  
+        .orange-color {
+          color: orange;
+        }
+      }
+    }
+  
+    .TotalPrce-Box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  
+      .TotalPrice-title {
+        color: #035397;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+  
+      .TotalPrice {
+        background: #035397;
+        padding: 16px;
+        width: 200px;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 8px;
+      }
+    }
+  
+    .PersInfo-Part {
+        display: none;
+        flex-direction: column;
         align-items: center;
+      transition: opacity 0.3s ease-in-out;
+      opacity: 0;
+      pointer-events: none;
+      .Pers-input{
+        margin-top: 2vh;
+        padding: 16px;
+        width: 80%;
+        text-align: center;
+        border-radius: 16px;
+        background: #035397;
+        color: white;
+        font-size: 1.3rem;
+        &:placeholder-shown{
+            color: orange;
+        }
+      }
+    }
+  
+    .show-PersInfo {
+        display: flex;
+      opacity: 1;
+      pointer-events: initial;
+      .nav-calc-box{
+        margin: auto;
+        margin-top: 2vh;
+        width: 100%;
 
-
-        .Room-Range{
-            margin-top: 5vh;
-            width: 400px;
-            background: #5089C6;
-            color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .sendmail{
+            width: 300px;
             padding: 16px;
             border-radius: 8px;
-            border: none;
-            text-align: center;
-            font-size: 1.5rem;
-
-        }
-        .Room-Range:focus{
-            outline: none;
-        }
-        .Room-Range::placeholder{
+            background: orange;
             color: white;
-            text-align: center;
+            font-weight: bold;
             font-size: 1.5rem;
-            opacity: 0.5;
             
         }
-    }
-    .Design-Quest{
-        margin-top: 5vh;
-        display: flex;
-        justify-content: space-around;
-        align-items: baseline;
-
-        .Design-Question{
-            font-size: 2rem;
-            color: #5089C6;
-        }
-
-        .Pers-Design{
-            width: 200px;
-            text-align: center;
-            background: #5089C6;
-            color: white;
-            padding: 8px 16px;
-            margin: 0 100px;
-            border-radius: 8px;
-            font-size: 1.5rem;
-        }
-    }
-    }
-    .select-pocket{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        gap: 3vw;
-        .pocket-item{
+        .nav-calc-buttons{
             display: flex;
-            flex-direction: column;
-            cursor: pointer;
-            .pocket-image{
-                width: 100%;
-                border: 1px solid #5089C6;
-                border-radius: 16px;
-            }
-            .orange-outline{
-                border: 3px solid orange;
-            }
-
-            .pocket-description-select{
-                color: #5089C6;
-                font-weight: bold;
-                text-align: center;
-                font-size: 1.5rem;
-            }
-            .orange-color{
-                color: orange;
-            }
-
-        }
-
-    }
-    .TotalPrce-Box{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        .TotalPrice-title{
-            color: #035397;
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-        .TotalPrice{
-                background: #035397;
-                padding: 16px;
+            justify-content: space-between;
+            width: 100%; 
+            margin-top: 3vh;
+            .backpage{
                 width: 200px;
+                background: #035397;
+                padding: 12px;
+                border-radius: 8px;
                 color: white;
                 font-size: 1.5rem;
                 font-weight: bold;
-                text-align: center;
-                border-radius: 8px;
-            }
-
+                text-align: center
+                                
+            } 
+            .wp-consalt{
+                @extend .backpage;
+                width: 220px;
+                list-style: none;
+                text-decoration: none;
+                &:active{
+                    border: 1px solid black;
+                }
+            } 
+        }
+      }
     }
-    
-    .PersInfo-Part{
-
+    .hidden-calc{
+        display: none;
     }
-}
+  }
+  

@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react";
 import './Scss/Calculator.scss'
 import axios from "axios";
-import { response } from "har-validator";
 import economSelect from '../images/newpocket/neweconomphoto.jpg'
 import standartSelect from '../images/newpocket/newstandartphoto.jpg'
 import comfortSelect from '../images/newpocket/newocomfortphoto.jpg'
 import designSelect from '../images/newpocket/Newdesignphoto.jpg'
+import { Whatsapp } from "react-bootstrap-icons";
 
 
 
 function MainCalculator(){
 
-  let TotalPrice = 0
+   const [TotalPrice, setTotalPrice] = useState()
 
     const [formData, setFormData] = useState({
         name: '',
@@ -21,11 +21,16 @@ function MainCalculator(){
         tel: '',
         roomCount: '',
         selfdesign: 'да',
-        pricetophp: TotalPrice,
         remontType: 'econom'
       });
 
       const [selectRemont, setSelectRemont] = useState(1)
+      const [ShowPersInfo, setShowPersInfo] = useState(false)
+
+      const HandleSwitch = () => {
+        setShowPersInfo(!ShowPersInfo)
+
+      }
 
       const handleChange = (e) => {
         setFormData({
@@ -35,7 +40,6 @@ function MainCalculator(){
       };
       
       const TestMail = (e) =>{
-        console.log(formData);
         e.preventDefault()
       }
 
@@ -51,14 +55,13 @@ function MainCalculator(){
         formDataToSend.append("tel", formData.tel);
         formDataToSend.append("roomCount", formData.roomCount);
         formDataToSend.append("selfdesign", formData.selfdesign);
-        formDataToSend.append("pricetophp", formData.pricetophp);
+        formDataToSend.append("pricetophp", TotalPrice);
         formDataToSend.append("remontType", formData.remontType)
 
         axios.post('./helpers/mail.php', formDataToSend)
         .then((response)=>{
           console.log(response.data);
         console.log(`lastdaata`, formDataToSend);
-        console.log( `just data`,formData);
 
         })
         .catch((error)=>{
@@ -124,13 +127,12 @@ function MainCalculator(){
       
       useEffect(()=>{
         calculateCost()
-        console.log(formData);
         console.log(`price`, TotalPrice);
       },[formData, selectRemont])
     
       const calculateCost = () => {
-        console.log(111);
-        TotalPrice = (formData.range * (CurrentDesign() + CurrentPocketPrice() + CurrentTypeOfArea()))
+        let NewTotalPrice = formData.range * (CurrentDesign() + CurrentPocketPrice() + CurrentTypeOfArea())
+        setTotalPrice(NewTotalPrice)
         // console.log(formData.range, CurrentDesign, CurrentPocketPrice, CurrentTypeOfArea);
       };
 
@@ -171,10 +173,10 @@ function MainCalculator(){
       } 
 
       return (
-        <form name="form" className="Main-Calc" id="Main-Calculator"onSubmit={TestMail} >
+        <form name="form" className="Main-Calc" id="Main-Calculator"onSubmit={ToSendMail} >
 
           <p className="Calc-title"> Калькулятор </p>
-                <div className="Calc-Part">
+                <div className={`Calc-Part ${ShowPersInfo ? 'hidden-calc' : ''}` }>
                   <div className="RoomsAndType">
                   <select
                           className="TypeOfArea"
@@ -247,11 +249,23 @@ function MainCalculator(){
                 alt="fourth pocket"/>
                 <p className={`pocket-design-desctiption pocket-description-select${selectRemont === 4 ? 'orange-color' : ''} `}>Пакет Design</p>
                 </div>
-
               </div>
+              <div className="TotalPrce-Box">
+            <p className="TotalPrice-title">Примерная стоимость ремонта (без материалов):</p>
+          <p className="TotalPrice">{TotalPrice} тг</p>
+          
+          </div>
+                  <button type="button" onClick={HandleSwitch} className="NexPage">Далее</button>
+
                 </div>
-                            <div className="PersInfo-Part">
+                            <div className={`PersInfo-Part ${ShowPersInfo ? 'show-PersInfo' : ''}`}>
+                            <div className="TotalPrce-Box">
+            <p className="TotalPrice-title">Примерная стоимость ремонта (без материалов):</p>
+          <p className="TotalPrice">{TotalPrice} тг</p>
+          
+          </div>
                                               <input
+                                              className="Pers-input"
                                                 type="text"
                                                 name="name"
                                                 placeholder="Имя"
@@ -260,6 +274,7 @@ function MainCalculator(){
                                                 
                                               />
                                               <input
+                                              className="Pers-input"
                                                 type="email"
                                                 name="email"
                                                 placeholder="Email"
@@ -269,6 +284,7 @@ function MainCalculator(){
                                               />
                                               
                                               <input
+                                              className="Pers-input"
                                                 type="tel"
                                                 name="tel"
                                                 placeholder="Телефон"
@@ -276,17 +292,21 @@ function MainCalculator(){
                                                 onChange={handleChange}
                                                 
                                               />
+                                              <div className="nav-calc-box">
+                                              <button className="sendmail" type="submit">Отправить</button>
+                                                <div className="nav-calc-buttons">
+                                                <button type="button" className="backpage" onClick={HandleSwitch}>{`<<`} Назад</button>
+                                                <a className="wp-consalt" href="https://wa.me/77010892022?text=Меня%20интересует%20ремонт%20квартиры">Консультация <Whatsapp/></a>
+                                                </div>
+
+                                              </div>
+
                             </div>
 
-          <div className="TotalPrce-Box">
-            <p className="TotalPrice-title">Примерная стоимость ремонта (без материалов):</p>
-          <p className="TotalPrice">{TotalPrice}</p>
-          
-          </div>
+
           
 
           
-          <button type="submit">Отправить</button>
         </form>
       );
     }
