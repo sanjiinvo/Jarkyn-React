@@ -1,0 +1,55 @@
+.pockets-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+
+    .pockets-box-title{
+        text-align: center;
+        color: #035397;
+        font-size: 2rem;
+        font-weight: bold;
+        border-bottom: 2px solid orange;
+        padding-bottom: 1vh;
+
+    }
+    .pocket-box-econom{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        width: 100%;
+
+
+        .pocket-econom-right{
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: baseline;
+            justify-content: space-between;
+            background: #b7cfe5;
+            padding: 5vh;
+            border-radius: 20px 0 0 20px;
+
+
+            .pocket-econom-img-box{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+                .pocket-img{
+
+                }
+                .pocket-img-econom{
+                    background-image: url(../../images/econom-qv.jpg);
+                }
+                .not-included-list{
+                    ul{
+                        li{
+                            list-style: none;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
