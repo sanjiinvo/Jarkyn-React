@@ -3,6 +3,9 @@
     flex-direction: column;
     align-items: center;
     width: 80%;
+    @media screen and (max-width: 1100px) {
+        width: 90%;
+       }
 
     .pockets-box-title{
         text-align: center;
@@ -23,10 +26,9 @@
         .pocket-econom-right{
             display: flex;
             flex-direction: row-reverse;
-            align-items: baseline;
             justify-content: space-between;
             background: #b7cfe5;
-            padding: 5vh;
+            padding: 5vh 5vh 5vh 10vh;
             border-radius: 20px 0 0 20px;
 
 
@@ -35,21 +37,175 @@
                 flex-direction: column;
                 align-items: center;
                 
-                .pocket-img{
 
-                }
                 .pocket-img-econom{
-                    background-image: url(../../images/econom-qv.jpg);
+                    object-fit: contain;
+                    max-width: 300px;
+                    border-radius: 30px;
+                    margin-bottom: 3vh;
                 }
-                .not-included-list{
-                    ul{
-                        li{
-                            list-style: none;
-                            text-decoration: none;
-                        }
-                    }
+
+            }
+
+        } 
+        .pocket-econom-left{
+            background: #1f6099;
+            padding: 20px;
+            border-radius: 16px;
+            color: white;
+            text-align: center;
+            width: 200px;
+            margin-right: -5vw;
+            z-index: 2;
+        }
+
+    }
+    .pocket-box-standart{
+        display: flex;
+        margin-top: 5vh;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        .pocket-standart-right{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background: #b7cfe5;
+            padding: 5vh 10vh 5vh 5vh;
+            border-radius: 0 20px 20px 0;
+            .pocket-standart-img-box{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .pocket-img-standart{
+                    object-fit: contain;
+                    max-width: 300px;
+                    border-radius: 30px;
+                    margin-bottom: 3vh;
                 }
             }
+        } 
+        .pocket-standart-left{
+            background: #1f6099;
+            padding: 20px;
+            border-radius: 16px;
+            color: white;
+            text-align: center;
+            width: 200px;
+            margin-left: -10vh;
+            z-index: 3;
         }
     }
+    .pocket-box-comfort{
+        margin-top: 5vh;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        width: 100%;
+
+
+        .pocket-comfort-right{
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            background: #b7cfe5;
+            padding: 5vh 5vh 5vh 10vh;
+            border-radius: 20px 0 0 20px;
+
+
+            .pocket-comfort-img-box{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+
+                .pocket-img-comfort{
+                    object-fit: contain;
+                    max-width: 300px;
+                    border-radius: 30px;
+                    margin-bottom: 3vh;
+                }
+
+            }
+
+        } 
+        .pocket-econom-left{
+            background: #1f6099;
+            padding: 20px;
+            border-radius: 16px;
+            color: white;
+            text-align: center;
+            width: 200px;
+            margin-right: -5vw;
+            z-index: 2;
+        }
+
+    }
+    .pocket-box-design{
+        display: flex;
+        margin-top: 5vh;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        .pocket-design-right{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background: #b7cfe5;
+            padding: 5vh 12vh 5vh 5vh;
+            border-radius: 0 20px 20px 0;
+            .pocket-design-img-box{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .pocket-img-design{
+                    object-fit: contain;
+                    max-width: 300px;
+                    border-radius: 30px;
+                    margin-bottom: 3vh;
+                }
+            }
+        } 
+        .pocket-design-left{
+            background: #1f6099;
+            padding: 20px;
+            border-radius: 16px;
+            color: white;
+            text-align: center;
+            width: 200px;
+            margin-left: -10vh;
+            z-index: 3;
+        }
+    }
+}
+.pocket-name{
+    color: white;
+    font-size: 2rem;
+
+}
+.pocket-name-description{
+    color: white;
+    font-size: 1.5rem;
+}
+.not-included-list{
+    ul{
+        li{
+            list-style: none;
+            text-decoration: none;
+        }
+    }
+}
+.included-list{
+    ul{
+        li{
+            list-style: none;
+            text-decoration: none;
+        }
+    }
+}
+.pocket-img{
+    object-fit: contain;
+    max-width: 300px;
+    border-radius: 30px;
+    margin-bottom: 3vh;
 }

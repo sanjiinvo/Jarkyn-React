@@ -10,12 +10,22 @@
   margin-top: 15vh;
   height: 100%;
 
+  @media screen and (max-width: 1100px) {
+    width: 90%;
+   }
+   @media screen and (max-width: 768px) {
+    width: 100%;
+   }
+
   .Calc-title {
     margin: 1vh auto;
     font-size: 2rem;
     color: #035397;
     font-weight: bold;
     border-bottom: 2px solid orange;
+    @media screen and (max-width: 768px) {
+      font-size: 1.5rem;
+     }
   }
 
   .Calc-Part {
@@ -33,6 +43,11 @@
       margin: 0 100px;
       border-radius: 8px;
       font-size: 1.5rem;
+      @media screen and (max-width: 550px) {
+        font-size: 1.2rem;
+        width: 200px;
+        padding: 12px;
+       }
     }
 
     .TypeOfArea option {
@@ -68,7 +83,13 @@
         text-align: center;
         font-size: 1.5rem;
         font-weight: bold;
-  
+        @media screen and (max-width: 768px) {
+          min-width: 30vw;
+         }
+         @media screen and (max-width: 550px) {
+          width: 200px;
+          font-size: 1.2rem;
+         }
       }
   
       .Room-Range:focus {
@@ -81,6 +102,10 @@
         font-weight: bold;
         font-size: 1.5rem;
         opacity: 0.5;
+        @media screen and (max-width: 550px) {
+          font-size: 1.2rem;
+          padding: 16px;
+         }
       }
       .Room-Count{
         width: 400px;
@@ -90,19 +115,34 @@
         color: white;
         font-size: 1.5rem;
         text-align: center;
+        @media screen and (max-width: 550px) {
+          width: 230px;
+          font-size: 1.2rem;
+          
+         }
       }
     }
   }
 
   .Design-Quest {
+    margin: auto;
     margin-top: 5vh;
     display: flex;
     justify-content: space-around;
     align-items: baseline;
+    @media screen and (max-width: 768px) {
+      align-items: center;
+     }
+     @media screen and (max-width: 550px) {
+     justify-content: space-between;
+     }
 
     .Design-Question {
       font-size: 2rem;
       color: #5089c6;
+      @media screen and (max-width: 768px) {
+        font-size: 1.5rem;
+       }
     }
 
     .Pers-Design {
@@ -114,6 +154,11 @@
       margin: 0 100px;
       border-radius: 8px;
       font-size: 1.5rem;
+      @media screen and (max-width: 550px) {
+        font-size: 1.1rem;
+        width: 120px;
+        padding: 6px 10px;
+       }
     }
   }
 
@@ -172,6 +217,8 @@
       color: #035397;
       font-size: 1.5rem;
       font-weight: bold;
+      text-align: center;
+
     }
 
     .TotalPrice {
@@ -183,6 +230,11 @@
       font-weight: bold;
       text-align: center;
       border-radius: 8px;
+      @media screen and (max-width: 768px) {
+        font-size: 1.2rem;
+        width: 150px;
+        padding: 12px;
+       }
     }
   }
 
@@ -228,12 +280,20 @@
         color: white;
         font-weight: bold;
         font-size: 1.5rem;
+        @media screen and (max-width: 768px) {
+          font-size: 1.5rem;
+          width: 200px;
+          padding: 12px;
+         }
       }
       .nav-calc-buttons {
         display: flex;
         justify-content: space-between;
         width: 100%;
         margin-top: 3vh;
+        @media screen and (max-width: 550px) {
+          justify-content: space-around;
+         }
         .backpage {
           width: 200px;
           background: #035397;
@@ -243,6 +303,16 @@
           font-size: 1.5rem;
           font-weight: bold;
           text-align: center;
+          @media screen and (max-width: 768px) {
+            font-size: 1.2rem;
+            width: 150px;
+            padding: 8px;
+           }
+           @media screen and (max-width: 550px) {
+            font-size: 1.1rem;
+            width: 120px;
+            padding: 8px;
+           }
         }
         .wp-consalt {
           @extend .backpage;

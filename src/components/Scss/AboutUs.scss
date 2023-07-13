@@ -2,6 +2,10 @@
    display: flex; 
    flex-direction: column;
    width: 90%;
+   @media screen and (max-width: 1100px) {
+    width: 100%;
+   }
+
 
    .top-aboutUs{
     display: flex;
@@ -18,10 +22,36 @@
             margin: 0;
             padding: 0;
             color: #035397;
+            @media screen and (max-width: 900px) {
+                font-size: 3rem;
+               }
+               @media screen and (max-width: 768px) {
+                font-size: 2.5rem;
+               }
+               @media screen and (max-width: 690px) {
+                font-size: 2rem;
+               }
+               @media screen and (max-width: 550px) {
+                font-size: 1.2rem;
+               }
+
+               
         }
         .description-aboutUs{
             color: #5089C6;
             font-size: 1.5rem;
+             @media screen and (max-width: 768px) {
+                font-size: 1.2rem;
+               }
+               @media screen and (max-width: 690px) {
+                font-size: 1.2rem;
+               }
+               @media screen and (max-width: 550px) {
+                font-size: 1rem;
+               }
+               @media screen and (max-width: 380px) {
+                font-size: 0.8rem;
+               }
         }
     }
     .right-top-aboutUs{
@@ -33,6 +63,18 @@
             li{
                 color: #035397;
                 font-size: 1.5rem;
+                @media screen and (max-width: 768px) {
+                    font-size: 1.5rem;
+                   }
+                   @media screen and (max-width: 690px) {
+                    font-size: 1.2rem;
+                   }
+                   @media screen and (max-width: 550px) {
+                    font-size: 1rem;
+                   }
+                   @media screen and (max-width: 550px) {
+                    font-size: 0.8rem;
+                   }
             }
         }
     }
@@ -42,24 +84,40 @@
     border: 2px solid #FFAA4C;
    }
    .bot-aboutUS{
-
     display: flex;
+    margin: auto;
     justify-content: space-evenly;
+    @media screen and (max-width: 800px) {
+        justify-content: space-between;
+       }
 
 
     .states-aboutUs {
+        text-align: center;
         .state-number{
             font-size: 1.5rem;
             margin: 0;
             padding: 0;
             color: #001E6C;
             font-weight: bold;
+            @media screen and (max-width: 690px) {
+                font-size: 1.2rem;
+               }
+               @media screen and (max-width: 550px) {
+                font-size: 1rem;
+               }
         }
         .state-text{
             font-size: 1.5rem;
             margin: 0;
             padding: 0;
             color: #035397;
+            @media screen and (max-width: 690px) {
+                font-size: 1.2rem;
+               }
+               @media screen and (max-width: 550px) {
+                font-size: 1rem;
+               }
         }
     }
    }

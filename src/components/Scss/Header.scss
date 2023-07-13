@@ -3,11 +3,23 @@
     margin-top: 2vh;
     justify-content: space-around;
     align-items: baseline;
-    .logo{
+    .Logo{
+        img{
+            object-fit: contain;
+            @media screen and (max-width: 768px) {
+                width: 150px;
+               }
+               @media screen and (max-width: 600px) {
+                width: 100px;
+               }
+        }
     }
     .Des-Menu{
         font-size: 1.7rem;
         display: flex;
+        @media screen and (max-width: 768px) {
+            font-size: 1.2rem;
+           }
         .link{
             margin: 0 2vw;
             list-style: none;
