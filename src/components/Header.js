@@ -4,6 +4,8 @@ import { MenuButton, List, Instagram, Telephone, Whatsapp, ArrowBarRight, XLg } 
 import Logo from '../images/Logo.svg';
 import Footer from './Footer';
 import './Scss/Header.scss';
+import LocalJob from './LocalJob';
+import { Link } from "react-router-dom";
 
 function Header() {
   const [activeLink, setActiveLink] = useState('');
@@ -83,6 +85,18 @@ function Header() {
           >
             Калькулятор
           </a>
+          <a
+            className={`link ${activeLink === 'localjob' ? 'underlined-link' : ''}`}
+            href="#localjob"
+            onClick={handleAnchorClick}
+          >
+            Доп.Работы
+          </a>
+
+
+            {/* <Link className={`link ${activeLink === 'Main-Calculator' ? 'underlined-link' : ''}`} onClick={handleAnchorClick} href='localwork' to='localwork'>Частные работы</Link> */}
+            
+
         </div>
         <div className='Mob-menu'>
           <div className='Mob-Titles'>
@@ -135,17 +149,18 @@ function Header() {
                       >
                         Калькулятор
                       </a>
+                      <p className={`link ${activeLink === 'Main-Calculator' ? 'underlined-link' : ''}`}>Частные работы</p>
               </div>
               </div>
 
               <div className='Mob-Menu-Footer'>
                   <a href="#" className="Footer-left-item">
-                    <Instagram /> @JarkynUI.astana
+                    <Instagram /> JarkynUI.astana
                   </a>
                   <a href="#" className="Footer-left-item">
                     <Telephone /> +7 701 089 2022
                   </a>
-                  <a href="#" className="Footer-left-item">
+                  <a href="https://wa.me/77010892022?text=Меня%20интересует%20ремонт%20квартиры" className="Footer-left-item">
                     <Whatsapp /> "JarkynUI"
                   </a>
               </div>

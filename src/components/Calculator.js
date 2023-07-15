@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./Scss/Calculator.scss";
 import axios from "axios";
 import economSelect from "../images/newpocket/neweconomphoto.jpg";
@@ -10,11 +10,14 @@ import { Whatsapp } from "react-bootstrap-icons";
 function MainCalculator() {
 
   const [TotalPrice, setTotalPrice] = useState();
-
+  const [sendmessage, setsendmessage] = useState();
+  const [FirstErrorMes, setFirstErrorMes] = useState()
+  const FirstRef = useRef(null)
+  const SecondRef = useRef(null) 
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    typeOfArea: "новостройка",
+    typeOfArea: "",
     range: "",
     tel: "",
     roomCount: "",
@@ -26,7 +29,18 @@ function MainCalculator() {
   const [ShowPersInfo, setShowPersInfo] = useState(false);
 
   const HandleSwitch = () => {
+    if(formData.typeOfArea===''){
+      setFirstErrorMes('Не выбран тип помещения')
+      FirstRef.current.scrollIntoView({ behavior: 'smooth' });
+      return;
+    }
+    if(formData.range===''){
+      setFirstErrorMes('Площадь помещения')
+      FirstRef.current.scrollIntoView({ behavior: 'smooth' });
+      return;
+    }
     setShowPersInfo(!ShowPersInfo);
+    setFirstErrorMes('')
   };
 
   const handleChange = (e) => {
@@ -41,8 +55,30 @@ function MainCalculator() {
   };
 
   const ToSendMail = (e) => {
+    if(formData.name===''){
+      setsendmessage('Введите Имя')
+      SecondRef.current.scrollIntoView({ behavior: 'smooth' });
     e.preventDefault();
 
+      return;
+    }
+    if(formData.email===''){
+      setsendmessage('Введите Email')
+      SecondRef.current.scrollIntoView({ behavior: 'smooth' });
+    e.preventDefault();
+
+      return;
+    }
+    if(formData.tel===''){
+      setsendmessage('Введите Телефон')
+      SecondRef.current.scrollIntoView({ behavior: 'smooth' });
+    e.preventDefault();
+
+      return;
+    }
+
+    e.preventDefault();
+  
     const formDataToSend = new FormData();
     formDataToSend.append("name", formData.name);
     formDataToSend.append("email", formData.email);
@@ -59,6 +95,8 @@ function MainCalculator() {
       .then((response) => {
         console.log(response.data);
         console.log(`lastdaata`, formDataToSend);
+        setTotalPrice(0)
+        alert('Заявка отправлена')
       })
       .catch((error) => {
         console.log(error);
@@ -171,6 +209,7 @@ function MainCalculator() {
       onSubmit={ToSendMail}
     >
       <p className="Calc-title"> Калькулятор </p>
+      <p ref={FirstRef} className="sendmessage">{FirstErrorMes}</p>
       <div className={`Calc-Part ${ShowPersInfo ? "hidden-calc" : ""}`}>
         <div className="RoomsAndType">
           <select
@@ -311,8 +350,10 @@ function MainCalculator() {
           <p className="TotalPrice-title">
             Примерная стоимость ремонта (без материалов):
           </p>
-          <p className="TotalPrice">{TotalPrice} тг</p>
+          <p className="TotalPrice">{isNaN(TotalPrice) ? 0 : TotalPrice}тг</p>
+
         </div>
+
         <button type="button" onClick={HandleSwitch} className="NexPage">
           Далее
         </button>
@@ -322,7 +363,10 @@ function MainCalculator() {
           <p className="TotalPrice-title">
             Примерная стоимость ремонта (без материалов):
           </p>
-          <p className="TotalPrice">{TotalPrice} тг</p>
+
+          <p className="TotalPrice">{isNaN(TotalPrice) ? 0 : TotalPrice} тг</p>
+          <p ref={SecondRef} className="sendmessage">{sendmessage}</p>
+
         </div>
         <input
           className="Pers-input"

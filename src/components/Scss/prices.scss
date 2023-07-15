@@ -1,0 +1,80 @@
+.price-list{
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 100%;
+
+        .search-box{
+            display: inline-flex;
+            margin-bottom: 2vh;
+            align-items: center;
+            border: 1px solid #5089C6;
+            border-radius: 30px;
+            padding: 8px;
+            width: 40vw;
+            min-width: 20%;
+            gap: 1vh;
+            @media screen and (max-width: 750px) {
+                width: 60vw;
+            }
+            .search-icon{
+                order: -1;
+                min-width: 5vw;
+                color: #5089C6;
+            }
+            .search-input{
+                border: 0;
+                min-width: 20%;
+                width: 100%;
+                color: #5089C6;
+            }
+            .search-input::placeholder{
+                color: #5089C6;
+            }
+            .search-input:focus{
+                outline: none;
+            }
+        }
+
+    .list-container{
+        background: #b7cfe5;
+        border-radius: 30px;
+        padding: 3vh;
+        margin: auto;
+        overflow: scroll;
+        max-height: 65vh;
+        width: 100%;
+        @media screen and (max-width: 550px) {
+            border-radius: 15px;
+
+        }
+
+        .column{
+            .price-item{
+                border: 1px solid #b7cfe5;
+                border-bottom: 1px solid orange;
+                width: 100%;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: baseline;
+                gap: 3vw;
+                font-size: 1.2rem;
+                color: #084485;
+                @media screen and (max-width: 750px) {
+                    font-size: 1rem;
+                }
+                .price-name{
+                    width: 30vw;
+                    @media screen and (max-width: 750px) {
+                        width: 40vw;
+                    }
+                    @media screen and (max-width: 550px) {
+                        width: 60vw;
+                    }
+                }
+                .price-price{
+                }
+            }
+        }
+    }
+}

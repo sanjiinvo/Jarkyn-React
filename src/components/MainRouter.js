@@ -5,6 +5,7 @@ import MainCalculator from "./Calculator";
 import OurWorks from "./OurWorks";
 import PocketsBox from "./PocketsBox";
 import AboutUs from "./FirstSections";
+import LocalJob from "./LocalJob";
 
 function RouterLayout() {
   return (
@@ -16,6 +17,8 @@ function RouterLayout() {
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/ourworks" element={<OurWorks />} />
           <Route path="/pockets" element={<PocketsBox />} />
+          <Route path="/localjob" element={<LocalJob />} />
+          
         </Route>
       </Routes>
     </HashRouter>

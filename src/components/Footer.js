@@ -19,12 +19,12 @@ function Footer() {
     <div className="Footer">
            <div className="Footer-left">
         <a href="#" className="Footer-left-item">
-          <Instagram /> @JarkynUI.astana
+          <Instagram /> JarkynUI.astana
         </a>
         <a href="#" className="Footer-left-item">
           <Telephone /> +7 701 089 2022
         </a>
-        <a href="#" className="Footer-left-item">
+        <a href="https://wa.me/77010892022?text=Меня%20интересует%20ремонт%20квартиры" className="Footer-left-item">
           <Whatsapp /> "JarkynUI"
         </a>
       </div>

@@ -9,6 +9,7 @@ import car2 from '../images/newpocket/Newdesignphoto-qv.jpg'
 import car3 from '../images/newpocket/neweconomphoto-qv.jpg'
 import car4 from '../images/newpocket/newocomfortphoto-qv.jpg'
 import car5 from '../images/newpocket/newstandartphoto-qv.jpg'
+import { ArrowBarLeft, ArrowBarRight } from "react-bootstrap-icons";
 let WindowW = window.innerWidth
 
 
@@ -19,6 +20,8 @@ function OurWorks() {
         Наши работы
       </div>
     <div id='ourworks' className='OurWorks-carrousel'>
+      <ArrowBarLeft className='nav-arrow'/>
+      
         <Carousel className='Carousel-box'>
       <Carousel.Item>
         <div className='collage-box'>
@@ -115,6 +118,7 @@ function OurWorks() {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
+    <ArrowBarRight className='nav-arrow' />
     </div>
   </div>
     

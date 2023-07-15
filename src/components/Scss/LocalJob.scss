@@ -1,0 +1,27 @@
+.Local-job {
+    margin: 2vh auto;
+    width: 80%;
+    @media screen and (max-width: 750px) {
+        width: 95%;
+    }
+    @media screen and (max-width: 480px) {
+        width: 100%;
+    }
+  
+    .Local-job-title {
+      text-align: center;
+      color: #035397;
+    }
+  
+    .accordion-button .accordion-header {
+      font-size: 3rem;
+    }
+    
+    .price-title {
+      font-size: 1.5rem;
+    }
+  }
+  .work-list{
+    margin: auto;
+    max-height: 70vh;
+  }
