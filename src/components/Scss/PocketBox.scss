@@ -6,6 +6,9 @@
     @media screen and (max-width: 1100px) {
         width: 90%;
        }
+       @media screen and (max-width: 950px) {
+        width: 100%;
+       }
 
     .pockets-box-title{
         text-align: center;
@@ -14,6 +17,10 @@
         font-weight: bold;
         border-bottom: 2px solid orange;
         padding-bottom: 1vh;
+             @media screen and (max-width: 650px) {
+                font-size: 1.7rem;
+            }            
+        
 
     }
     .pocket-box-econom{
@@ -30,6 +37,15 @@
             background: #b7cfe5;
             padding: 5vh 5vh 5vh 10vh;
             border-radius: 20px 0 0 20px;
+            @media screen and (max-width: 950px) {
+                padding: 2vh 2vh 2vh 5vh;
+               }
+            @media screen and (max-width: 650px) {
+                padding: 1vh 1vh 1vh 3vh;
+               }  
+            @media screen and (max-width: 555px) {
+                padding: 0vh 0vh 0vh 1vh;
+               }                            
 
 
             .pocket-econom-img-box{
@@ -43,6 +59,9 @@
                     max-width: 300px;
                     border-radius: 30px;
                     margin-bottom: 3vh;
+                    @media screen and (max-width: 950px) {
+                        width: 30vw
+                       }
                 }
 
             }
@@ -57,6 +76,20 @@
             width: 200px;
             margin-right: -5vw;
             z-index: 2;
+            @media screen and (max-width: 950px) {
+                padding: 10px;
+                margin-right: -7vw;
+                width: 30vw;
+               }
+            @media screen and (max-width: 400px) {
+                padding: 5px;
+                margin-right: -10vw;
+                width: 30vw;
+                border-radius: 5px;
+               }
+
+
+            
         }
 
     }
@@ -73,15 +106,27 @@
             background: #b7cfe5;
             padding: 5vh 10vh 5vh 5vh;
             border-radius: 0 20px 20px 0;
+
+            @media screen and (max-width: 950px) {
+                padding: 2vh 5vh 2vh 2vh;
+               }
+            @media screen and (max-width: 650px) {
+                padding: 1vh 3vh 1vh 1vh;
+               }                
             .pocket-standart-img-box{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 .pocket-img-standart{
                     object-fit: contain;
-                    max-width: 300px;
+                    width: 300px;
                     border-radius: 30px;
                     margin-bottom: 3vh;
+
+
+                    @media screen and (max-width: 950px) {
+                        width: 30vw
+                       }    
                 }
             }
         } 
@@ -94,6 +139,18 @@
             width: 200px;
             margin-left: -10vh;
             z-index: 3;
+            @media screen and (max-width: 950px) {
+                padding: 5px;
+                margin-left: -7vh;
+                width: 20vw;
+               }     
+            @media screen and (max-width: 400px) {
+                padding: 1px;
+                margin-left: -10vw;
+                width: 30vw;
+                border-radius: 5px;
+               }
+     
         }
     }
     .pocket-box-comfort{
@@ -111,6 +168,12 @@
             background: #b7cfe5;
             padding: 5vh 5vh 5vh 10vh;
             border-radius: 20px 0 0 20px;
+             @media screen and (max-width: 950px) {
+            padding: 2vh 2vh 2vh 5vh;
+            }
+             @media screen and (max-width: 650px) {
+            padding: 1vh 1vh 1vh 3vh;
+            }
 
 
             .pocket-comfort-img-box{
@@ -129,7 +192,7 @@
             }
 
         } 
-        .pocket-econom-left{
+        .pocket-comfort-left{
             background: #1f6099;
             padding: 20px;
             border-radius: 16px;
@@ -138,6 +201,12 @@
             width: 200px;
             margin-right: -5vw;
             z-index: 2;
+            @media screen and (max-width: 950px) {
+                padding: 10px;
+                margin-right: -7vh;
+                width: 20vw;
+               }   
+            
         }
 
     }
@@ -154,6 +223,12 @@
             background: #b7cfe5;
             padding: 5vh 12vh 5vh 5vh;
             border-radius: 0 20px 20px 0;
+             @media screen and (max-width: 950px) {
+            padding: 2vh 6vh 2vh 2vh;
+            }   
+        
+             
+                 
             .pocket-design-img-box{
                 display: flex;
                 flex-direction: column;
@@ -175,23 +250,63 @@
             width: 200px;
             margin-left: -10vh;
             z-index: 3;
+            @media screen and (max-width: 950px) {
+                padding: 5px;
+                margin-left: -5vh;
+                width: 20vw;
+               }                 
         }
     }
 }
 .pocket-name{
     color: white;
     font-size: 2rem;
+    @media screen and (max-width: 950px) {
+        font-size: 1.5rem;
+       }
+       @media screen and (max-width: 650px) {
+        font-size: 1.2rem;
+       }
+       @media screen and (max-width: 555px) {
+        font-size: 1rem;
+       }
+       @media screen and (max-width: 480px) {
+        font-size: 0.8rem;
+       }
 
 }
 .pocket-name-description{
     color: white;
     font-size: 1.5rem;
+    @media screen and (max-width: 950px) {
+        font-size: 1.2rem;
+       }
+       @media screen and (max-width: 650px) {
+        font-size: 1.1rem;
+       }   
+       @media screen and (max-width: 555px) {
+        font-size: 0.8rem;
+       }    
+       @media screen and (max-width: 480px) {
+        font-size: 0.6rem;
+       }
 }
 .not-included-list{
     ul{
+        padding-left: 0 !important;
+
         li{
             list-style: none;
             text-decoration: none;
+            @media screen and (max-width: 650px) {
+                font-size: 1rem;
+               } 
+               @media screen and (max-width: 550px) {
+                font-size: 0.9rem;
+               }   
+               @media screen and (max-width: 555px) {
+                font-size: 0.8rem;
+               }              
         }
     }
 }
@@ -200,6 +315,12 @@
         li{
             list-style: none;
             text-decoration: none;
+            @media screen and (max-width: 650px) {
+                font-size: 0.9rem;
+               }        
+               @media screen and (max-width: 555px) {
+                font-size: 0.7rem;
+               }      
         }
     }
 }
@@ -208,4 +329,17 @@
     max-width: 300px;
     border-radius: 30px;
     margin-bottom: 3vh;
+    @media screen and (max-width: 950px) {
+        width: 30vw;
+       }
+       @media screen and (max-width: 750px) {
+        border-radius: 20px;
+       }
+       @media screen and (max-width: 650px) {
+        border-radius: 15px;
+       }    
+       @media screen and (max-width: 555px) {
+        border-radius: 5px;
+       }   
+
 }

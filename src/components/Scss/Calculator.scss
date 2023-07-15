@@ -15,6 +15,7 @@
    }
    @media screen and (max-width: 768px) {
     width: 100%;
+    margin-top: 5vh;
    }
 
   .Calc-title {
@@ -90,6 +91,11 @@
           width: 200px;
           font-size: 1.2rem;
          }
+         @media screen and (max-width: 480px) {
+          width: 40vw;
+          font-size: 1rem;
+          padding: 12px;
+         }
       }
   
       .Room-Range:focus {
@@ -106,6 +112,10 @@
           font-size: 1.2rem;
           padding: 16px;
          }
+         @media screen and (max-width: 480px) {
+          font-size: 1rem;
+          padding: 12px;
+         }
       }
       .Room-Count{
         width: 400px;
@@ -118,6 +128,12 @@
         @media screen and (max-width: 550px) {
           width: 230px;
           font-size: 1.2rem;
+          
+         }
+         @media screen and (max-width: 480px) {
+          padding: 12px;
+          width: 40vw;
+          font-size: 1rem;
           
          }
       }
@@ -143,6 +159,9 @@
       @media screen and (max-width: 768px) {
         font-size: 1.5rem;
        }
+       @media screen and (max-width: 480px) {
+        font-size: 1.2rem;
+       }
     }
 
     .Pers-Design {
@@ -156,7 +175,8 @@
       font-size: 1.5rem;
       @media screen and (max-width: 550px) {
         font-size: 1.1rem;
-        width: 120px;
+        margin: 0;
+        padding: 0;
         padding: 6px 10px;
        }
     }
@@ -172,6 +192,9 @@
     font-weight: bold;
     font-size: 1.5rem;
     margin: auto;
+    @media screen and (max-width: 480px) {
+      font-size: 1.2rem;
+     }
   }
 
   .select-pocket {
@@ -179,16 +202,29 @@
     display: flex;
     justify-content: space-between;
     gap: 3vw;
+    @media screen and (max-width: 480px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1vw;
+     }
 
     .pocket-item {
       display: flex;
       flex-direction: column;
+      @media screen and (max-width: 480px) {
+        text-align: center;
+        margin: auto;
+       }
       cursor: pointer;
 
       .pocket-image {
         width: 100%;
         border: 1px solid #5089c6;
         border-radius: 16px;
+        @media screen and (max-width: 480px) {
+          text-align: center;
+          width: 30vw;
+         }
       }
 
       .orange-outline {
@@ -200,6 +236,9 @@
         font-weight: bold;
         text-align: center;
         font-size: 1.5rem;
+        @media screen and (max-width: 480px) {
+          font-size: 1.2rem;
+         }
       }
 
       .orange-color {
@@ -234,6 +273,9 @@
         font-size: 1.2rem;
         width: 150px;
         padding: 12px;
+       }
+       @media screen and (max-width: 480px) {
+        width: 40vw;
        }
     }
   }
@@ -285,6 +327,11 @@
           width: 200px;
           padding: 12px;
          }
+         @media screen and (max-width: 480px) {
+          font-size: 1.2rem;
+          width: 40vw;
+          padding: 8px;
+         }
       }
       .nav-calc-buttons {
         display: flex;
@@ -313,6 +360,10 @@
             width: 120px;
             padding: 8px;
            }
+           @media screen and (max-width: 480px) {
+            width: 30vw;
+            font-size: 1rem;
+           }
         }
         .wp-consalt {
           @extend .backpage;
@@ -322,6 +373,9 @@
           &:active {
             border: 1px solid black;
           }
+          @media screen and (max-width: 480px) {
+            width: 40vw;
+           }
         }
       }
     }

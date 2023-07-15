@@ -10,8 +10,8 @@ function Homepage(){
         <div  className="homepage">
             <AboutUs/>
             <MainCalculator/>
-            {/* <PocketsBox/> */}
-            {/* <OurWorks/> */}
+            <PocketsBox/>
+            <OurWorks/>
         </div>
     )
 }

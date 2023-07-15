@@ -8,6 +8,7 @@ import designSelect from "../images/newpocket/Newdesignphoto.jpg";
 import { Whatsapp } from "react-bootstrap-icons";
 
 function MainCalculator() {
+
   const [TotalPrice, setTotalPrice] = useState();
 
   const [formData, setFormData] = useState({
@@ -189,7 +190,7 @@ function MainCalculator() {
             value={formData.roomCount}
             onChange={handleChange}
           >
-            <option value="">Количество комнат</option>
+            <option id="room-num" value="">Кол-во комнат</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -299,7 +300,7 @@ function MainCalculator() {
             />
             <p
               className={`pocket-design-desctiption pocket-description-select${
-                selectRemont === 4 ? "orange-color" : ""
+                selectRemont === 4 ? " orange-color" : ""
               } `}
             >
               Пакет Design

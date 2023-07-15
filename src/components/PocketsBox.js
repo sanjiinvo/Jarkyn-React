@@ -134,7 +134,7 @@ function PocketsBox(){
                     </div>
 
                 </div>
-                <div className="pocket-econom-left">
+                <div className="pocket-comfort-left">
                     <p className="pocket-name">
                         "Комфорт"
                     </p>
