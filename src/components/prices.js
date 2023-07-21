@@ -37,7 +37,7 @@ const PricesList = () => {
                 <div className='price-name'>{item.name}</div>
                 <div className='price-price'>{item.price} {item.amount}</div>
                
-                
+                {/* 123 */}
             </div>
 ))}
 
