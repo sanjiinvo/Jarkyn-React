@@ -34,6 +34,7 @@
             display: flex;
             flex-direction: row-reverse;
             justify-content: space-between;
+            align-items: center;
             background: #b7cfe5;
             padding: 5vh 5vh 5vh 10vh;
             border-radius: 20px 0 0 20px;
@@ -342,4 +343,9 @@
         border-radius: 5px;
        }   
 
+}
+.no-mat{
+    font-size: 1rem;
+    color: yellow;
+    text-decoration: underline;
 }

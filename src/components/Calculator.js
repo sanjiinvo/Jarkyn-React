@@ -6,6 +6,7 @@ import standartSelect from "../images/newpocket/newstandartphoto.jpg";
 import comfortSelect from "../images/newpocket/newocomfortphoto.jpg";
 import designSelect from "../images/newpocket/Newdesignphoto.jpg";
 import { Whatsapp } from "react-bootstrap-icons";
+import { Form } from "react-bootstrap";
 
 function MainCalculator() {
 
@@ -247,18 +248,7 @@ function MainCalculator() {
 
 
         </div>
-        <div className="Design-Quest">
-          <p className="Design-Question">Есть ли у вас дизайн проекта?</p>
-          <select
-            className="Pers-Design"
-            name="selfdesign"
-            value={formData.selfdesign}
-            onChange={handleChange}
-          >
-            <option value="да">Да</option>
-            <option value="нет">Нет</option>
-          </select>
-        </div>
+
         <div className="select-pocket">
           <div
             className="pocket-item econom-pocket"
@@ -368,8 +358,35 @@ function MainCalculator() {
           <p ref={SecondRef} className="sendmessage">{sendmessage}</p>
 
         </div>
+        <div className="Design-Quest">
+          <p className="Design-Question">Есть ли у вас готовый дизайн?</p>
+         
+        <div className="Design-Question">
+        <Form.Check aria-label="option 1"
+        value={formData.selfdesign}
+        onChange={handleChange}
+        name="selfdesign" />
+
+        
+        </div>
+    
+          {/* <label>
+            <input
+          type="checkbox"
+            className=" design-check"
+            name="selfdesign"
+            value={formData.selfdesign}
+            onChange={handleChange}
+          />
+          </label> */}
+
+            {/* <option value="да">Да</option>
+            <option value="нет">Нет</option>
+          </select> */}
+        </div>
+        {/* select */}
         <input
-          className="Pers-input"
+          className="Pers-input "
           type="text"
           name="name"
           placeholder="Имя"

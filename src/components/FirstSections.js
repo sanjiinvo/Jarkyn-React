@@ -22,7 +22,6 @@ function AboutUs(){
                     <li className="specials-aboutUs"><Clipboard2Check color="orange"/> Упаковка и вынос мусора</li>
                     <li className="specials-aboutUs"><Clipboard2Check color="orange"/> Подбор и закуп материала</li>
                     <li className="specials-aboutUs"><Clipboard2Check color="orange"/> Бесплатный выезд на замеры</li>
-
                 </ul>
             </div>
             </div>
@@ -33,7 +32,7 @@ function AboutUs(){
                 100+
             </p>
             <p className="state-text">
-                Довольных покупателей
+                Довольных {<br></br>} покупателей
             </p>
             </div>
             <div className="states-aboutUs">
@@ -41,7 +40,7 @@ function AboutUs(){
                 153
             </p>
             <p className="state-text">
-                Довольных Клиентов
+                Довольных {<br></br>} Клиентов
             </p>
             </div>
             <div className="states-aboutUs">
@@ -49,7 +48,7 @@ function AboutUs(){
                 15
             </p>
             <p className="state-text">
-                Квартир в работе
+                Квартир {<br></br>} в работе
             </p>
             </div>
             <div className="states-aboutUs">
@@ -57,7 +56,7 @@ function AboutUs(){
                 10
             </p>
             <p className="state-text">
-                Рабочих групп
+                Рабочих {<br></br>} групп
             </p>
             </div>
             </div>

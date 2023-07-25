@@ -6,7 +6,6 @@ import comfort from  '../images/comfort-qv.png'
 import design from '../images/design-qv.jpg'
 
 function PocketsBox(){
-
     return(
         <div placeholder="" id="pockets" className="pockets-box">
             <p className="pockets-box-title">
@@ -16,31 +15,29 @@ function PocketsBox(){
                 <div className="pocket-econom-right">
                     <div className="pocket-econom-img-box">
                         <img src={economqv} className="pocket-img pocket-img-econom"/>
-
                         <div className="not-included-list">
                             <ul>
                                 <li><XLg color='red'/>Система "теплый пол"</li>
                                 <li><XLg color='red'/>Система "умный дом"</li>
                                 <li><XLg color='red'/>Потолок - по дизайн проекту</li>
                                 <li><XLg color='red'/>Наливной самовыравнивающийся пол</li>
-
                             </ul>
                         </div>
                     </div>
                     <div className="included-list">
                     <ul>
-                        <li><Check2All color='green'/>Штукатурка стен</li>
-                        <li><Check2All color='green'/>Шпатлевка стен</li>
+                        <li><Check2All color='green'/>Штукатурка стен под правило</li>
+                        <li><Check2All color='green'/>Шпатлевка стен под правило</li>
                         <li><Check2All color='green'/>Стяжка полов по маякам</li>
-                        <li><Check2All color='green'/>Электромонтажные работы, сложность работ - ""Эконом""</li>
                         <li><Check2All color='green'/>Сантехнические работы, сложность работ - "Эконом"</li>
-                        <li><Check2All color='green'/>Поклейка обоев</li>
-                        <li><Check2All color='green'/>Покраска стен и потолков</li>
                         <li><Check2All color='green'/>Установка дверей</li>
-                        <li><Check2All color='green'/>Монтаж напольных покрытий</li>
+                        <li><Check2All color='green'/>Монтаж напольных покрытий одного размера и типа</li>
+                        <li><Check2All color='green'/>Укладка плитки одного размера и типа</li>
+                        <li><Check2All color='green'/>Устройство оконных и дверных откосов</li>
+                        {/* <li><Check2All color='green'/>Монтаж напольных покрытий</li>
                         <li><Check2All color='green'/>Укладка плитки</li>
                         <li><Check2All color='green'/>Устройство оконных и дверных откосов</li>
-                        <li><Check2All color='green'/>Уборка и вывоз мусора</li>
+                        <li><Check2All color='green'/>Уборка и вывоз мусора</li> */}
                     </ul>
                     </div>
 
@@ -51,6 +48,7 @@ function PocketsBox(){
                     </p>
                     <p className="pocket-name-description">
                         Пакет от 20.000тг/кв.м
+                        <p className='no-mat'>(без материалов)</p>
                     </p>
                 </div>
 
@@ -65,27 +63,22 @@ function PocketsBox(){
                             <li><XLg color='red'/>-Система "теплый пол"</li>
                             <li><XLg color='red'/>-Система "умный дом"</li>
                             <li><XLg color='red'/>-Потолок - по дизайн проекту</li>
-
-
                             </ul>
                         </div>
                     </div>
                     <div className="included-list">
                     <ul>
-                    <li><Check2All color='green'/>Возведение перегородок</li>
-                    <li><Check2All color='green'/>Штукатурка стен по маякам</li>
-                    <li><Check2All color='green'/>Шпатлевка стен по маякам</li>
+                    <li><Check2All color='green'/>Штукатурка стен под правило</li>
+                    <li><Check2All color='green'/>Шпатлевка стен под правило</li>
                     <li><Check2All color='green'/>Стяжка полов по маякам</li>
                     <li><Check2All color='green'/>Наливной самовыравнивающийся пол</li>
-                    <li><Check2All color='green'/>Электромонтажные работы, сложность работ - "Стандарт"</li>
-                    <li><Check2All color='green'/>Сантехнические работы, сложность работ - "Стандарт"</li>
+                    <li><Check2All color='green'/>Сантехнические работы, сложность работ - "Стандарт";</li>
                     <li><Check2All color='green'/>Поклейка обоев</li>
                     <li><Check2All color='green'/>Покраска стен и потолков</li>
                     <li><Check2All color='green'/>Установка дверей</li>
-                    <li><Check2All color='green'/>Монтаж напольных покрытий</li>
-                    <li><Check2All color='green'/>Укладка плитки</li>
+                    <li><Check2All color='green'/>Монтаж напольных покрытий одного размера и типа</li>
+                    <li><Check2All color='green'/>Укладка плитки одного размера и типа</li>
                     <li><Check2All color='green'/>Устройство оконных и дверных откосов</li>
-                    <li><Check2All color='green'/>Уборка и вывоз мусора</li>
                     </ul>
                     </div>
 
@@ -96,6 +89,8 @@ function PocketsBox(){
                     </p>
                     <p className="pocket-name-description">
                         Пакет от 24.000тг/кв.м
+                        <p className='no-mat'>(без материалов)</p>
+
                     </p>
                 </div>
 
@@ -107,28 +102,30 @@ function PocketsBox(){
 
                         <div className="not-included-list">
                             <ul>
-                                <li><Check2All color='green'/>Штукатурка стен по маякам</li>
-                                <li><Check2All color='green'/>Шпатлевка стен по маякам</li>
-                                <li><Check2All color='green'/>Стяжка полов по маякам</li>
-                                <li><Check2All color='green'/>Наливной самовыравнивающийся пол</li>
+                            <li><Check2All color='green'/>Возведение перегородок</li>
+                        <li><Check2All color='green'/>Штукатурка стен по маякам</li>
+                        <li><Check2All color='green'/>Шпатлевка стен по маякам</li>
+                        <li><Check2All color='green'/>Стяжка полов по маякам</li>
+                        <li><Check2All color='green'/>Наливной самовыравнивающийся пол</li>
 
                             </ul>
                         </div>
                     </div>
                     <div className="included-list">
                     <ul>
-                    <li><Check2All color='green'/>Возведение перегородок</li>
-                    <li><Check2All color='green'/>Электромонтажные работы, сложность работ - "Comfort"</li>
-                    <li><Check2All color='green'/>Сантехнические работы, сложность работ - "Comfort"</li>
+
+                    <li><Check2All color='green'/>Электромонтажные работы, сложность работ  "Комфорт"</li>
+                    <li><Check2All color='green'/>Сантехнические работы, сложность работ "Комфорт"</li>
                     <li><Check2All color='green'/>Поклейка обоев</li>
                     <li><Check2All color='green'/>Покраска стен и потолков</li>
                     <li><Check2All color='green'/>Установка дверей</li>
+                    <li><Check2All color='green'/>Установка скрытых дверей</li>
                     <li><Check2All color='green'/>Монтаж напольных покрытий</li>
-                    <li><Check2All color='green'/>Укладка плитки</li>
+                    <li><Check2All color='green'/>Укладка плитки по решения Заказчика</li>
                     <li><Check2All color='green'/>Устройство оконных и дверных откосов</li>
-                    <li><Check2All color='green'/>-Система "теплый пол"</li>
+                    <li><Check2All color='green'/>Система "теплый пол"</li>
                     <li><Check2All color='green'/>Система "умный дом"</li>
-                    <li><Check2All color='green'/>-Потолок - по дизайн проекту</li>
+                    <li><Check2All color='green'/>Потолок  по дизайн проекту</li>
                     <li><Check2All color='green'/>Уборка и вывоз мусора</li>
                     </ul>
                     </div>
@@ -140,6 +137,8 @@ function PocketsBox(){
                     </p>
                     <p className="pocket-name-description">
                         Пакет от 27.000тг/кв.м
+                        <p className='no-mat'>(без материалов)</p>
+
                     </p>
                 </div>
 
@@ -165,6 +164,7 @@ function PocketsBox(){
                     <li><Check2All color='green'/>Обговаривается с дизайнером</li>
                     <li><Check2All color='green'/>Уникальный дизайн вашей квартиры</li>
                     <li><Check2All color='green'/>Услуги дизайнера от 3000тг/за кв м.</li>
+                    <li><Check2All color='green'/>"Премиум дизайн"по данному пакету выполняются все виды работы согласно дизайнерскому проекту Заказчика.</li>
                     </ul>
                     </div>
 
@@ -175,6 +175,9 @@ function PocketsBox(){
                     </p>
                     <p className="pocket-name-description">
                         Пакет от 37.000тг/кв.м
+                        <p className='no-mat'>(без материалов)</p>
+
+
                     </p>
                 </div>
 
